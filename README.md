@@ -9,5 +9,7 @@ Each governance member sets (asynchronously) the target contract which it percei
 
 Each target set updates the current majority. Each call is forwarded to the majority.
 
+flashloan attack does not work as its intra transaction and the majority reverts
+
 chatgpt4 prompt:
 you are an expert smart contract developer and ERC writer. we are creating a DAO proxy. the DAO proxy is an ERC20. additionally, the DAO proxy contains a mapping from address to another address. 
