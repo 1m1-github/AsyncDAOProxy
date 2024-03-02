@@ -70,7 +70,7 @@ contract AsyncDAOPRoxy is ERC20 {
 
     mapping(address => uint256) public voteCount;
 
-    function AsyncDAOPRoxy_mint(address new_token_holder) public {
+    function AsyncDAOPRoxy_mint(address new_token_holder, uint num_tokens) public {
         uint256 callerBalance = balanceOf(msg.sender);
         require(callerBalance > 0, "Caller has no tokens to vote");
         
@@ -78,7 +78,7 @@ contract AsyncDAOPRoxy is ERC20 {
         
         uint256 totalSupply = totalSupply();
         if (voteCount[new_token_holder] > totalSupply / 2) {
-            _mint(new_token_holder, 1); // Example mint amount, adjust as needed
+            _mint(new_token_holder, num_tokens);
             voteCount[new_token_holder] = 0; // Reset votes for this holder after minting
         }
     }
