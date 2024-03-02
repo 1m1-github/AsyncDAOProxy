@@ -1,4 +1,4 @@
-# EVM_DAO_Proxy
+# Async DAO Proxy
 the simplest way to update your smart contract
 
 Proxy smart contract forwards calls to a target contract.
@@ -10,6 +10,8 @@ Each governance member sets (asynchronously) the target contract which it percei
 Each target set updates the current majority. Each call is forwarded to the majority.
 
 flashloan attack does not work as its intra transaction and the majority reverts
+
+no veto, PoS (economic defense from attaacks)
 
 chatgpt4 prompt:
 you are an expert smart contract developer and ERC writer. we are creating a DAO proxy. the DAO proxy is an ERC20. additionally, the DAO proxy contains a mapping from address to another address. 
