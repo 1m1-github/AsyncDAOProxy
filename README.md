@@ -13,5 +13,7 @@ flashloan attack does not work as its intra transaction and the majority reverts
 
 no veto, PoS (economic defense from attaacks)
 
+should be ERC
+
 chatgpt4 prompt:
 you are an expert smart contract developer and ERC writer. we are creating a DAO proxy. the DAO proxy is an ERC20. additionally, the DAO proxy contains a mapping from address to another address. 
