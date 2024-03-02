@@ -1,13 +1,16 @@
+(work-in-progress)
+
 # Async DAO Proxy
 the simplest way to update your smart contract
 
-Proxy smart contract forwards calls to a target contract.
+Proxy smart contract forwards calls to the DAO target contract.
 
-The target contract is defined as the majority contract as defined by the DAO members (ERC20 holders).
+Each governance member sets (asynchronously) the target contract which it perceives to be the correct contract.
 
-Each governance member sets (asynchronously) the target contract which it perceives to be the latest version of the target contract.
+The DAO target contract is defined as the balance weighted winner contract as defined by the DAO members (ERC20 holders).
+A majority (> 50%) target guarantess target.
 
-Each target set updates the current majority. Each call is forwarded to the majority.
+For gas optimization, each member target set updates the DAO target.
 
 flashloan attack does not work as its intra transaction and the majority reverts
 
