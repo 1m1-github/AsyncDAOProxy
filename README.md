@@ -12,7 +12,7 @@
 
 - the target mapping contains an address that each token holder (DAO member) considers the current latest version
 
-- target_DAO is calculated as the address with the most votes, on each call to AsyncDAOProxy_update, which is run by each token holder asynchronously
+- target_DAO is calculated as the address with the most votes (plurality), on each call to AsyncDAOProxy_update, which is run by each token holder asynchronously
 
 - the contract is protected economically, just like Proof-of-Stake (DAO members can proxy to a bad contract destroying the value of their own token)
 
